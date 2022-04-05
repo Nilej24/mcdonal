@@ -1,4 +1,11 @@
 function home() {
+  // title
+  const title = (function () {
+    const element = document.createElement("h1");
+    element.textContent = "Non-overpriced Burger Place";
+    return element;
+  })();
+
   // description
   const desc = (function () {
     const title = document.createElement("h2");
@@ -53,7 +60,7 @@ function home() {
   })();
 
   const content = document.querySelector("#content");
-  content.append(desc, hours, location);
+  content.append(title, desc, hours, location);
 }
 
 console.log("home module loaded");
