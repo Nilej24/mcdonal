@@ -1,1 +1,3 @@
-console.log("it works");
+import home from "./home.js"
+
+home();
