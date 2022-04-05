@@ -1,25 +1,22 @@
 function home() {
-  const content = document.querySelector("#content");
-
   // description
-  const desc = document.createElement("div");
-  (function () {
+  const desc = (function () {
     const title = document.createElement("h2");
     title.textContent = "Description";
 
     const text = document.createElement("p");
     text.textContent = "We won't charge you 3 great british pounds for just a can of coke, I can promise you that lol. We do burgers and fries, and maybe some other stuff if we feel like it.";
 
-    desc.append(title, text);
+    const element = document.createElement("div");
+    element.append(title, text);
+    return element;
   })();
 
   // hours
-  const hours = document.createElement("div");
-  (function () {
+  const hours = (function () {
     const title = document.createElement("h2");
     title.textContent = "Hours";
 
-    const list = document.createElement("ul");
     const sun = document.createElement("li");
     sun.textContent = "Sunday: 8am - 8pm"
     const mon = document.createElement("li");
@@ -34,23 +31,28 @@ function home() {
     fri.textContent = "Friday: 6am - 10pm"
     const sat = document.createElement("li");
     sat.textContent = "Saturday: 8am - 10pm"
+    const list = document.createElement("ul");
     list.append(sun, mon, tue, wed, thu, fri, sat);
 
-    hours.append(title, list);
+    const element = document.createElement("div");
+    element.append(title, list);
+    return element;
   })();
 
   // location
-  const location = document.createElement("div");
-  (function () {
+  const location = (function () {
     const title = document.createElement("h2");
     title.textContent = "Location";
 
     const text = document.createElement("p");
     text.textContent = "543 Burger Lane, Tomato Town, Ohio";
 
-    location.append(title, text);
+    const element = document.createElement("div");
+    element.append(title, text);
+    return element;
   })();
 
+  const content = document.querySelector("#content");
   content.append(desc, hours, location);
 }
 
