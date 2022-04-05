@@ -60,6 +60,7 @@ function home() {
   })();
 
   const content = document.querySelector("#content");
+  content.innerHTML = "";
   content.append(title, desc, hours, location);
 }
 

@@ -30,6 +30,7 @@ function contact() {
   const waiter = createContact("Dio Brando", "Waiter", "420420420 (once again, quite funny isn't it?)", "iCanStopTime@theworld.com (he's a waiter, get it???)");
 
   const content = document.querySelector("#content");
+  content.innerHTML = "";
   content.append(title, owner, chef, waiter);
 }
 

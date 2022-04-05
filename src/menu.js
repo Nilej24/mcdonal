@@ -36,14 +36,14 @@ function menu() {
     const title = document.createElement("h2");
     title.textContent = "Burgers";
 
-    const cheeseDesc = "Yes, we buy cheeseburgers from McDonalds and sell them for the exact same price.";
-    const cheeseburger = menuItem("Cheeseburger", cheeseImg, cheeseDesc, 0.99);
+    const cheeseDesc = "Yes, we buy cheeseburgers from McDonalds and resell them for the exact same price!!!";
+    const cheeseburger = menuItem("Cheeseburger", cheeseImg, cheeseDesc, "0.99");
 
     const abomDesc = "A delicious burger, probably. Too many ingredients to list. Truly an abomination...";
-    const abomination = menuItem("Abomination", abomImg, abomDesc, 3.50);
+    const abomination = menuItem("Abomination", abomImg, abomDesc, "3.50");
 
-    const whatDesc = "Cow meat, horse meat, dog meat, etc. Jk I don't think there's actually horse meat in there.";
-    const what = menuItem("Fucking What", whatImg, whatDesc, 4.50);
+    const whatDesc = "Cow meat, horse meat, bat meat, dog meat, etc. Just kidding, obviously there's no horse meat!";
+    const what = menuItem("Fucking What", whatImg, whatDesc, "4.50");
 
     const element = document.createElement("div");
     element.append(title, cheeseburger, abomination, what);
@@ -56,10 +56,10 @@ function menu() {
     title.textContent = "Fries";
 
     const saltDesc = "Would you like some fries with your salt? HAHAHAHHAHAHAHA I'm so funny...";
-    const salt = menuItem("Salt + Fries", saltImg, saltDesc, 1.50);
+    const salt = menuItem("Salt + Fries", saltImg, saltDesc, "1.50");
 
     const wafflesDesc = "They look like waffles, but don't be fooled... They are actually fries, believe it or not!!!";
-    const waffles = menuItem("Suspicious Waffles", wafflesImg, wafflesDesc, 2.00);
+    const waffles = menuItem("Suspicious Waffles", wafflesImg, wafflesDesc, "2.00");
 
     const element = document.createElement("div");
     element.append(title, salt, waffles);
@@ -67,6 +67,7 @@ function menu() {
   })();
 
   const content = document.querySelector("#content");
+  content.innerHTML = "";
   content.append(title, burgers, fries);
 }
 
