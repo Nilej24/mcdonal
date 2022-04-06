@@ -10,4 +10,4 @@ homeBtn.onclick = home;
 menuBtn.onclick = menu;
 contactBtn.onclick = contact;
 
-contact();
+home();
