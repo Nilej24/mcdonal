@@ -14,6 +14,20 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
-    ]
-  }
+      {
+        test: /\.s(c|a)ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
+  },
+  devServer: {
+    open: true,
+    compress: true,
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    client: {
+      overlay: false,
+    },
+  },
 };

@@ -11,7 +11,7 @@ function createContact(name, role, num, email) {
   const emailEl = document.createElement("p");
   emailEl.textContent = email;
 
-  const element = document.createElement("div");
+  const element = document.createElement("section");
   element.append(nameEl, roleEl, numEl, emailEl);
   return element;
 }

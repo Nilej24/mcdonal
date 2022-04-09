@@ -1,9 +1,10 @@
 function home() {
   // title
   const title = (function () {
-    const element = document.createElement("h1");
-    element.textContent = "Non-overpriced Burger Place";
-    return element;
+    const title = document.createElement("h1");
+    title.textContent = "Non-overpriced Burger Place";
+    
+    return title;
   })();
 
   // description
@@ -14,8 +15,9 @@ function home() {
     const text = document.createElement("p");
     text.textContent = "We won't charge you 3 great british pounds for just a can of coke, I can promise you that lol. We do burgers and fries, and maybe some other stuff if we feel like it.";
 
-    const element = document.createElement("div");
+    const element = document.createElement("section");
     element.append(title, text);
+    element.classList.add("description");
     return element;
   })();
 
@@ -41,8 +43,9 @@ function home() {
     const list = document.createElement("ul");
     list.append(sun, mon, tue, wed, thu, fri, sat);
 
-    const element = document.createElement("div");
+    const element = document.createElement("section");
     element.append(title, list);
+    element.classList.add("hours");
     return element;
   })();
 
@@ -54,8 +57,9 @@ function home() {
     const text = document.createElement("p");
     text.textContent = "543 Burger Lane, Tomato Town, Ohio";
 
-    const element = document.createElement("div");
+    const element = document.createElement("section");
     element.append(title, text);
+    element.classList.add("location");
     return element;
   })();
 

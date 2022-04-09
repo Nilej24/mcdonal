@@ -20,6 +20,7 @@ function menuItem(name, img, desc, price) {
 
   const element = document.createElement("div");
   element.append(nameEl, imgEl, descEl, priceEl);
+  element.classList.add("menu-item");
   return element;
 }
 
@@ -45,7 +46,7 @@ function menu() {
     const whatDesc = "Cow meat, horse meat, bat meat, dog meat, etc. Just kidding, obviously there's no horse meat!";
     const what = menuItem("Fucking What", whatImg, whatDesc, "4.50");
 
-    const element = document.createElement("div");
+    const element = document.createElement("section");
     element.append(title, cheeseburger, abomination, what);
     return element;
   })();
@@ -61,7 +62,7 @@ function menu() {
     const wafflesDesc = "They look like waffles, but don't be fooled... They are actually fries, believe it or not!!!";
     const waffles = menuItem("Suspicious Waffles", wafflesImg, wafflesDesc, "2.00");
 
-    const element = document.createElement("div");
+    const element = document.createElement("section");
     element.append(title, salt, waffles);
     return element;
   })();
